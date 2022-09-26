@@ -3,27 +3,11 @@ import MovieContainer from '../components/MovieContainer'
 import SeriesContainer from '../components/SeriesContainer'
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Loading from '../components/Loading'
 
 function ListFilm() {
 
   const [category, setCategory] = useState("TV Series")
 
-  const [isLoading, setIsLoading] = useState(false)
-
-  useEffect(() => {
-    setIsLoading(true)
-
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-  }, [])
-
-  if(isLoading) {
-    return <Loading />
-  }
-  
-  
   return (
     <>
     <div className='d-flex mt-4 mx-5 px-5 justify-content-between'>

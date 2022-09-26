@@ -8,7 +8,6 @@ import {
   FaRegMoneyBillAlt,
   FaUserCircle,
 } from "react-icons/fa";
-import Loading from '../components/Loading'
 import {Container, Row, Col, Card, Button, Badge} from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
 import profileUser from '../Images/profil.jpg'
@@ -28,22 +27,9 @@ const initialUser = {
 
 function Profile() {
 
-  const [isLoading, setIsLoading] = useState(false)
   
   const [state] = useContext(UserContext);
   
-  useEffect(() => {
-    setIsLoading(true)
-
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-  }, [])
-  
-
-  if(isLoading) {
-    return <Loading />
-  }
 
   return (
     <Container>

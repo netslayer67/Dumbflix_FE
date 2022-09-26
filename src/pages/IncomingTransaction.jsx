@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Container, Row, Col, Card, Table } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { API } from "../config/api";
-import Loading from '../components/Loading'
+
 
 const IncomingTransaction = () => {
   let { data: transaction } = useQuery("transactionCache", async () => {
@@ -10,7 +10,7 @@ const IncomingTransaction = () => {
     return response.data.data;
   });
 
-  const [isLoading, setIsLoading] = useState(false)
+  
 
   function Duration(dueDate, startDate) {
     const due = new Date(dueDate);
@@ -45,17 +45,7 @@ const IncomingTransaction = () => {
   }
 
 
-  useEffect(() => {
-    setIsLoading(true)
 
-    setTimeout(() => {
-      setIsLoading(false)
-    })
-  }, [])
-
-  if(isLoading) {
-    return <Loading />
-  }
 
   return (
     <>

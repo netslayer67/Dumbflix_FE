@@ -1,23 +1,9 @@
 import React, {useState, useEffect} from "react";
 import MoviesContainer from "../components/MovieContainer";
-import Loading from '../components/Loading'
 
 
 const Movie = () => {
 
-  const [isLoading, setIsLoading] = useState(false)
-
-  useEffect(() => {
-    setIsLoading(true)
-
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-  }, [])
-
-  if(isLoading) {
-    return <Loading />
-  }
   return (
     <>
       <div>

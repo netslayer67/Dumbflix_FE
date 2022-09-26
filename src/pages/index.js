@@ -6,7 +6,7 @@ import Profile from "./Profile";
 import Payment from "./Payment";
 import Notfound from "./Notfound";
 import ListFilm from './ListFilm';
-import Loading from '../components/Loading'
+// import Loading from '../components/Loading'
 import IncomingTransaction from './IncomingTransaction'
 import AddFilm from '../components/AddMovie/AddFilm'
 import AddEpisode from '../components/AddEpisode/AddEpisode'
@@ -29,7 +29,6 @@ export {
     PrivateRoute,
     PrivateRouteLogin,
     NotAdmin,
-    Loading,
     NotLogin,
     IncomingTransaction
 }
