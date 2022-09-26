@@ -95,10 +95,7 @@ function Payment() {
       });
     } catch (error) {}
   });
-
-  if (loading) {
-    return <Loading />;
-  }
+  
   return (
     <div className="container-fluid sectionPayment">
       <div className="text-center text-light">
